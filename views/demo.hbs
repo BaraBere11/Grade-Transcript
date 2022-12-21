@@ -1,0 +1,107 @@
+<div class="Demo">
+
+     <div class="col-md-8">
+        <h2>Demo Version</h2>
+        <br />
+        <form method="post" action="/add">
+        <fieldset>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input class="form-control" id="firstName" name="firstName" type="text" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="latName">Last Name:</label>
+                        <input class="form-control" id="lastName" name="lastName" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="schoolName">School Name:</label>
+                        <input class="form-control" id="schoolName" name="schoolName" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="schoolName">Program:</label>
+                        <input class="form-control" id="program" name="program" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="firstName">Date Of Birth:</label>
+                        <input class="form-control" id="dob" name="dob" type="text" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="latName">Student Number:</label>
+                        <input class="form-control" id="studNum" name="studNum" type="text" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="col-md-3">
+            <input type="submit" class="btn btn-dark" value="Submit" />
+            <input type="reset" class="btn btn-dark" value="Reset" />
+        </div>
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Semester Info</h2>
+        <br />
+        <h3>Add Course <button onclick="addRow()">+</button></h3>
+        <form method="post" action="/add">
+        <table id="table" class="table">
+            <th>
+                    <td>Course Name:</td>
+                    <td>Grade:</td>
+            </th>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <input class="form-control" id="courseName" name="courseName" type="text" />
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input class="form-control" id="grade" name="grade" type="text" />
+                    </div>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+        </table>
+        <input type="submit" class="btn btn-dark" value="Submit" />
+    </div>
+    </form>
+</div>
+
+<script>
+      function addRow() {
+        var table = document.getElementById("table");
+
+        var row = table.insertRow(-1);
+
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+
+        cell1.innerHTML = '<tr><td><div class="form-group"><input class="form-control" id="courseName" name="courseName" type="text" /></div></td>';
+        cell2.innerHTML = '<td><div class="form-group"><input class="form-control" id="grade" name="grade" type="text" /></div></td></tr>';
+      }
+</script>
+
+
+
+
